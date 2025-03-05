@@ -5,11 +5,12 @@
       <th>Title</th>
       <th>Description</th>
       <th colspan = "3">Actions</th>
+      <th>Author</th>
     </tr>
   </thead>
   <tbody>
     <% @articles.each do |article|%>
-    <tr>
+    <tr class="flex gap-x-5">
       <td>
         <%=article.title%>
       </td>
@@ -28,6 +29,7 @@
                     turbo_confirm: "Are you sure?"
                   } %>
       </td>
+      <td class="px-4 text-xl font-mono text-orange-500"><%=article.user.username if article.user%></td>
     </tr>
     <% end %>
   </tbody>
