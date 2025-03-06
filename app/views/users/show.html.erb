@@ -1,0 +1,6 @@
+<h1><%=@user.username%>'s profile</h1>
+<h2>Articles</h2>
+<%= render 'articles/article'%>
+<p>
+  <%= link_to 'Cancel and return back to articles', articles_path %>
+</p>
