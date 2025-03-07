@@ -1,0 +1,27 @@
+<h1>Alpha bloggers</h1>
+
+<div>
+  <div>
+    <% @users.each do |user|%>
+    <div class="mb-30">
+      <div class="flex gap-x-5">
+        <p>
+          by <%=link_to user.username, user %>
+        </p>
+      </div>
+      <div class="flex gap-x-5">
+        <p>
+          Number of articles: <%=link_to user.articles.count %>
+        </p>
+      </div>
+      <div class="flex gap-x-10">
+          <%=link_to 'View profile', user %> |
+          <%=link_to 'Edit profile', edit_user_path(user) %>
+      </div>
+      <div>
+        <p class="italic">Joined at <%=user.created_at%></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

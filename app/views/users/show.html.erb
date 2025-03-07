@@ -4,3 +4,6 @@
 <p>
   <%= link_to 'Cancel and return back to articles', articles_path %>
 </p>
+<p>
+  <%= link_to "Log out", logout_path, class: "text-blue-500", data: {turbo_method: :delete } %>
+</p>
