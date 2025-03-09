@@ -12,6 +12,12 @@
     <p>
       <%= link_to current_user.username, current_user, class: "text-blue-500" %>
     </p>
+    <p>
+      <%= link_to "Delete User", user_path(current_user), class: "text-blue-500", data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                  } %>
+    </p>
   </div>
 <%else%>
   <div class="flex gap-x-10">

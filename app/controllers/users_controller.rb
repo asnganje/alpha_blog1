@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
   def show
     @articles = @user.articles
   end
@@ -21,6 +21,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    flash[:notice]="User successfully and all associated articles deleted!"
+    redirect_to articles_path
+  end
   def edit
   end
 
