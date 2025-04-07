@@ -7,9 +7,7 @@ updates:
   open-pull-requests-limit: 10
   ignore:
       - dependency-name: "brakeman"
-  ignore:
       - dependency-name: "selenium-webdriver"
-  ignore:
       - dependency-name: "tailwindcss-rails"
 - package-ecosystem: github-actions
   directory: "/"
